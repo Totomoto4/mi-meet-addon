@@ -18,6 +18,8 @@ export default function Page() {
     if (!sidePanelClient) {
       throw new Error('Side Panel is not yet initialized!');
     }
+    console.log('Starting mainstage on:',MAIN_STAGE_URL);
+    
     await sidePanelClient.startActivity({ mainStageUrl: MAIN_STAGE_URL });
   }
 
